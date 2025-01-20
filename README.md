@@ -25,7 +25,7 @@ Letterboxd Services is a Chrome extension that will make your life easier by pro
 
 ## Installation
 
-If you are using Chrome you can download the extension straight from the Chrome Web Store [letterboxd-services](https://chrome.google.com/webstore/detail/letterboxd-services/bapjnacilodfnmciacfljidhhnbbippn).  
+If you are using Chrome you can download the extension straight from the Chrome Web Store [letterboxd-services](https://github.com/kim20598/letterboxd-services.git).  
 If you are not using chrome or you don't want to install it from the Chrome Web Store, you can also install it [manually](#manual-installation).
 
 ## Manual Installation
@@ -33,7 +33,7 @@ If you are not using chrome or you don't want to install it from the Chrome Web 
 1. Clone the repo
 
    ```sh
-   git clone https://github.com/pypp/letterboxd-services.git
+   git clone https://github.com/kim20598/letterboxd-services.git
    ```
 
 ### Chrome
