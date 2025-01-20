@@ -8,7 +8,7 @@
   <h3 align="center">Letterboxd Services</h3>
 
   <p align="center">
-    Letterboxd Extension that provides you torrents for movies.
+    Letterboxd Extension that provides you services for movies.
     <br/>
     <br/>
 
@@ -19,7 +19,7 @@
 ![preview](screenshots/screenshot1.png)
 <br/>
 
-Idea is taken from [here](https://github.com/Hame-daani/letterboxd_util).
+Idea is taken from [here](https://github.com/Hame-daani/letterboxd_util) , [here](https://github.com/pypp/letterboxd-services/).
 
 Letterboxd Services is a Chrome extension that will make your life easier by providing you torrents for movies straight through [letterboxd](https://letterboxd.com/) movie page
 
