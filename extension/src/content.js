@@ -33,7 +33,7 @@ const getTmdbID = () => {
  * @returns {string} Film's query (title and year) or empty string
  */
 const getQuery = () => {
-   const details = document.querySelector(".details");
+  const details = document.querySelector(".details");
   const title = details?.querySelector("h1")?.innerText;
   const year = details?.querySelector(".releaseyear > a")?.innerText;
   const rawQuery = `${title ?? ""}`;
@@ -64,7 +64,7 @@ const fetchTmdbIdFromLetterboxd = async (filmName) => {
   try {
     const response = await fetch(apiUrl);
     const data = await response.json();
-    
+
     if (data.results && data.results.length > 0) {
       // Return the TMDb ID of the first result
       return data.results[0].id;
@@ -137,6 +137,26 @@ const initPage = () => {
   if (watchSection) {
     watchSection.replaceWith(servicesSection);
   }
+
+  // Block the jnotify error notification from appearing by hiding it using CSS
+  const styleBlockJnotify = createElement("style", {}, [
+    document.createTextNode(".jnotify-container, .jnotify-notification-error { display: none !important; }")
+  ]);
+  document.head.append(styleBlockJnotify);
+
+  // MutationObserver to continuously block the jnotify notification if it's added dynamically
+  const observer = new MutationObserver(() => {
+    const notification = document.querySelector(".jnotify-notification-error");
+    if (notification) {
+      notification.style.display = 'none'; // Hide it if it appears
+    }
+  });
+
+  // Observe the body for any added nodes that might include the error notification
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+  });
 };
 
 window.onload = async () => {
